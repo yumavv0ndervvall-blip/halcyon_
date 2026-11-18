@@ -1,0 +1,44 @@
+<header class="site_header" data-site-header>
+  <a class="brand" href="index" aria-label="HALCYON 메인으로 이동">
+    <span class="brand_mark" aria-hidden="true">
+      <svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.6">
+        <path d="M5 21V12.5a8 8 0 0 1 16 0V21" />
+        <path class="mark_horizon" d="M1.5 21h23" />
+        <path d="M9.5 21v-7.5a3.5 3.5 0 0 1 7 0V21" opacity=".5" />
+      </svg>
+    </span>
+    <span class="brand_text">
+      <span class="brand_word">HALCYON</span>
+      <span class="brand_sub">ARCH PERSONA DATABASE</span>
+    </span>
+  </a>
+
+  <nav class="site_nav" id="siteNav" aria-label="주요 메뉴">
+    <a href="index">MAIN</a>
+    <a href="roster">ROSTER</a>
+
+    <div class="nav_dropdown">
+      <button type="button" aria-expanded="false" aria-haspopup="true">UNIT <span class="caret" aria-hidden="true"></span></button>
+
+      <div class="nav_dropdown_menu">
+        <a href="alpha" style="text-transform: none">VANGUARD α</a>
+        <a href="rearguard">REARGUARD</a>
+        <a href="sfs">S.F.S.</a>
+      </div>
+    </div>
+
+    <a href="prompt">PROMPT</a>
+  </nav>
+
+  <div class="site_status" aria-hidden="true">
+    <span class="status_dot"></span>
+    <span>SECURE LINK</span>
+    <span data-clock>KST --:--:--</span>
+  </div>
+
+  <button class="nav_toggle" type="button" aria-expanded="false" aria-controls="siteNav">
+    <span>MENU</span><span class="nav_toggle_bars" aria-hidden="true"></span>
+  </button>
+
+  <div class="scroll_meter" aria-hidden="true"><span></span></div>
+</header>

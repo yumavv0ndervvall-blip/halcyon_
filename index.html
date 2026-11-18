@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARCH PERSONA DATABASE</title>
+  <meta name="description" content="CherryMango님의 ARCH 세계관 기반 비공식 창작 설정 아카이브">
+  <meta name="theme-color" content="#070a11">
+  <script>(function(d){d.classList.add('js');try{if(sessionStorage.getItem('hc-arrive')){sessionStorage.removeItem('hc-arrive');d.classList.add('is-arriving')}}catch(e){}})(document.documentElement)</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="./style.css?v=200">
+</head>
+
+<body class="home_page">
+  <div class="boot" data-boot hidden>
+    <div></div>
+    <div>
+      <div class="boot_log">
+        <div class="boot_line is_head">HALCYON TERMINAL / ARCH PERSONA DATABASE</div>
+        <div class="boot_line"><span>ESTABLISHING SECURE LINK</span><span class="ok">OK</span></div>
+        <div class="boot_line"><span>VERIFYING CLEARANCE</span><span class="ok">OK</span></div>
+        <div class="boot_line"><span>INDEXING PERSONNEL RECORDS</span><span class="ok">OK</span></div>
+        <div class="boot_line"><span>MOUNTING UNIT FILES</span><span class="ok">OK</span></div>
+      </div>
+      <div class="boot_bar"><span></span></div>
+    </div>
+    <div class="boot_grant">ACCESS GRANTED</div>
+    <span class="boot_skip">CLICK OR PRESS ANY KEY TO SKIP</span>
+  </div>
+
+  <div id="nav-placeholder"></div>
+
+  <main class="home">
+    <section class="home_hero wrap" aria-label="ARCH PERSONA DATABASE">
+      <div class="home_hero_main">
+        <div class="home_kicker"><span class="bar" aria-hidden="true"></span><span class="t_label">CURRENT ACCESS</span></div>
+        <h1 class="home_title is_armed" aria-label="ACCESS GRANTED">
+          <span class="ln" aria-hidden="true"><span>ACCESS</span></span>
+          <span class="ln" aria-hidden="true"><span>GRANTED</span></span>
+        </h1>
+
+        <div class="home_desc">
+          <p class="home_lede">CherryMango님의 ARCH 세계관 기반 비공식 창작 설정을 기록합니다.</p>
+          <div class="home_notes" aria-label="site viewing guide">
+            <p>본 사이트는 PC 환경에서의 열람을 기준으로 최적화되어 있습니다.</p>
+            <p>또한 본 사이트는 개인 2차 창작 사이트이며 설정은 수시로 갱신될 수 있습니다.</p>
+            <p>원작 및 원작자와 공식적인 관계가 없습니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="scanner" data-scanner hidden aria-label="등록 인원 미리보기">
+        <div class="scanner_head">
+          <span class="t_label">PERSONNEL SCAN</span>
+          <span class="t_code" data-scanner-index>-- / --</span>
+        </div>
+        <a class="scanner_stage" href="roster">
+          <span class="scanner_line" aria-hidden="true"></span>
+          <span class="scanner_meta">
+            <span class="scanner_name"></span>
+            <span class="scanner_sub"></span>
+          </span>
+        </a>
+        <div class="scanner_foot">
+          <div class="scanner_ticks" aria-hidden="true"></div>
+          <div class="scanner_ctrl">
+            <button class="icon_btn" type="button" data-scanner-prev aria-label="이전 인원"></button>
+            <button class="icon_btn" type="button" data-scanner-pause aria-label="자동 순환 일시정지"></button>
+            <button class="icon_btn" type="button" data-scanner-next aria-label="다음 인원"></button>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="wrap" aria-labelledby="homeIndexTitle">
+      <h2 id="homeIndexTitle" class="sr_only">INDEX</h2>
+      <div class="home_index">
+        <a class="index_row" href="roster" data-reveal>
+          <span class="index_row_title">ROSTER</span>
+          <span class="index_row_desc">페르소나 프로필 명부</span>
+          <span class="index_row_meta"><span class="t_code"><b data-count="roster">--</b> PERSONNEL RECORDS</span></span>
+          <span class="index_row_arrow" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+        </a>
+
+        <div class="index_row" data-reveal style="--d: 80ms">
+          <span class="index_row_title">UNIT</span>
+          <span class="index_row_desc">창작 유닛 설정</span>
+          <nav class="unit_links" aria-label="유닛 바로가기">
+            <a href="alpha" style="text-transform: none">VANGUARD α</a>
+            <a href="rearguard">REARGUARD</a>
+            <a href="sfs">S.F.S.</a>
+          </nav>
+          <span></span>
+        </div>
+
+        <a class="index_row" href="prompt" data-reveal style="--d: 160ms">
+          <span class="index_row_title">PROMPT</span>
+          <span class="index_row_desc">이미지 프롬프트 기록</span>
+          <span class="index_row_meta"><span class="t_code"><b data-count="prompt">--</b> ARCHIVED PROMPTS</span></span>
+          <span class="index_row_arrow" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+        </a>
+      </div>
+
+      <div class="home_notice" data-reveal>
+        <span class="t_label notice_label">NOTICE</span>
+        <p>일부 설정에는 민감한 소재가 포함될 수 있으며, 사이트에 등장하는 지명과 인물은 현실과 아무런 관련이 없습니다. 사이트 내 모든 이미지는 AI 생성 이미지를 포함합니다.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site_footer">
+    <div class="wrap">
+      <span class="t_code">UNOFFICIAL PERSONA ARCHIVE</span>
+      <span class="t_code">AI GENERATED IMAGE INCLUDED</span>
+    </div>
+  </footer>
+
+  <script src="./prompt-data.js?v=200"></script>
+  <script src="./script.js?v=200"></script>
+</body>
+</html>

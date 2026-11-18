@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROMPT ARCHIVE | ARCH PERSONA DATABASE</title>
+  <meta name="theme-color" content="#070a11">
+  <script>(function(d){d.classList.add('js');try{if(sessionStorage.getItem('hc-arrive')){sessionStorage.removeItem('hc-arrive');d.classList.add('is-arriving')}}catch(e){}})(document.documentElement)</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="./style.css?v=200">
+</head>
+
+<body class="prompt_page prompt_archive_page">
+  <div id="nav-placeholder"></div>
+
+  <main class="prompt_archive_main">
+    <header class="page_head wrap">
+      <div class="page_head_kicker"><span class="bar" aria-hidden="true"></span><span class="t_label">ARCH VISUAL RECORDS</span></div>
+      <h1 class="page_title" id="promptArchiveTitle" data-unfold>PROMPT ARCHIVE</h1>
+      <p class="page_head_aside">SELECT IMAGE TO VIEW PROMPT</p>
+    </header>
+
+    <section class="wrap" aria-labelledby="promptArchiveTitle">
+      <div class="strip_bar">
+        <div class="strip_readout" aria-live="polite">
+          <span class="now" data-strip-now></span>
+          <span class="t_code" data-strip-index></span>
+        </div>
+        <div class="strip_ctrl">
+          <span class="t_code">← → KEYS</span>
+          <button class="icon_btn" type="button" data-strip-prev aria-label="이전 이미지 보기"></button>
+          <button class="icon_btn" type="button" data-strip-next aria-label="다음 이미지 보기"></button>
+        </div>
+      </div>
+
+      <div class="strip" data-prompt-strip aria-label="프롬프트 기록 목록"></div>
+    </section>
+  </main>
+
+  <div class="dialog prompt_archive_modal" data-archive-modal aria-hidden="true">
+    <button class="dialog_dim" type="button" data-archive-close aria-label="프롬프트 창 닫기" tabindex="-1"></button>
+
+    <section class="dialog_panel" role="dialog" aria-modal="true" aria-labelledby="archiveModalTitle">
+      <figure class="dialog_visual">
+        <img data-modal-image src="data:," alt="">
+      </figure>
+
+      <div class="dialog_body">
+        <header class="dialog_head">
+          <div>
+            <span class="t_label">ARCHIVED PROMPT</span>
+            <h2 class="dialog_title" id="archiveModalTitle" data-modal-title></h2>
+          </div>
+          <button class="dialog_close" type="button" data-archive-close aria-label="닫기"></button>
+        </header>
+
+        <div class="dialog_toolbar">
+          <span class="t_label">PROMPT DATA</span>
+          <span class="t_code" data-modal-index></span>
+        </div>
+
+        <pre class="dialog_prompt" data-modal-prompt tabindex="0"></pre>
+
+        <footer class="dialog_foot">
+          <div class="strip_ctrl">
+            <button class="btn" type="button" data-modal-prev></button>
+            <button class="btn" type="button" data-modal-next></button>
+          </div>
+          <div class="strip_ctrl">
+            <span class="copy_state" data-copy-state aria-live="polite"></span>
+            <button class="btn is_primary" type="button" data-copy-prompt>COPY PROMPT</button>
+          </div>
+        </footer>
+      </div>
+    </section>
+  </div>
+
+  <footer class="site_footer">
+    <div class="wrap">
+      <span class="t_code">PROMPT ARCHIVE</span>
+      <span class="t_code">AI GENERATED IMAGE INCLUDED</span>
+    </div>
+  </footer>
+
+  <script src="./prompt-data.js?v=200"></script>
+  <script src="./script.js?v=200"></script>
+</body>
+</html>

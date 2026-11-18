@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROSTER | ARCH PERSONA DATABASE</title>
+  <meta name="theme-color" content="#070a11">
+  <script>(function(d){d.classList.add('js');try{if(sessionStorage.getItem('hc-arrive')){sessionStorage.removeItem('hc-arrive');d.classList.add('is-arriving')}}catch(e){}})(document.documentElement)</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="./style.css?v=200">
+</head>
+
+<body class="roster_page">
+  <div id="nav-placeholder"></div>
+
+  <main>
+    <header class="page_head wrap">
+      <div class="page_head_kicker"><span class="bar" aria-hidden="true"></span><span class="t_label">PERSONNEL INDEX</span></div>
+      <h1 class="page_title" data-unfold>ARCH ROSTER</h1>
+      <div class="page_head_aside roster_notice">
+        <span class="t_label notice_label">NOTICE</span>
+        본 사이트는 케이브덕 플랫폼의
+        <a href="https://caveduck.io/user/CherryMango?locale=ko" target="_blank" rel="noopener noreferrer">CherryMango</a>님이 제작하신
+        ARCH 세계관을 기반으로 한 비공식 페르소나 정리 페이지입니다.
+        원작자 및 원작과 공식적인 관계가 없는 개인 2차 창작 사이트이며,
+        일부 캐릭터 설정에 민감한 소재가 포함될 수 있으니 열람 시 유의해 주세요.
+      </div>
+    </header>
+
+    <div class="wrap">
+      <div class="roster_toolbar" role="toolbar" aria-label="명부 필터">
+        <div class="toolbar_group">
+          <span class="t_label" id="divLabel">UNIT</span>
+          <div class="chip_row" role="group" aria-labelledby="divLabel">
+            <button class="chip" type="button" data-filter-division="all" aria-pressed="true">ALL <span class="n"></span></button>
+            <button class="chip" type="button" data-filter-division="alpha" aria-pressed="false" style="text-transform:none">VANGUARD α <span class="n"></span></button>
+            <button class="chip" type="button" data-filter-division="rearguard" aria-pressed="false">REARGUARD <span class="n"></span></button>
+            <button class="chip" type="button" data-filter-division="agent" aria-pressed="false">AGENT <span class="n"></span></button>
+            <button class="chip" type="button" data-filter-division="acolyte" aria-pressed="false">ACOLYTE <span class="n"></span></button>
+            <button class="chip" type="button" data-filter-division="harmony" aria-pressed="false">HARMONY DIV. <span class="n"></span></button>
+          </div>
+        </div>
+        <div class="toolbar_group">
+          <span class="t_label" id="attrLabel">속성</span>
+          <div class="chip_row" role="group" aria-labelledby="attrLabel">
+            <button class="chip" type="button" data-filter-attr="all" aria-pressed="true">전체 <span class="n"></span></button>
+            <button class="chip" type="button" data-filter-attr="fire" aria-pressed="false" data-attr="fire"><span class="swatch" aria-hidden="true"></span>불 <span class="n"></span></button>
+            <button class="chip" type="button" data-filter-attr="water" aria-pressed="false" data-attr="water"><span class="swatch" aria-hidden="true"></span>물 <span class="n"></span></button>
+            <button class="chip" type="button" data-filter-attr="wind" aria-pressed="false" data-attr="wind"><span class="swatch" aria-hidden="true"></span>바람 <span class="n"></span></button>
+            <button class="chip" type="button" data-filter-attr="lightning" aria-pressed="false" data-attr="lightning"><span class="swatch" aria-hidden="true"></span>번개 <span class="n"></span></button>
+            <button class="chip" type="button" data-filter-attr="ice" aria-pressed="false" data-attr="ice"><span class="swatch" aria-hidden="true"></span>얼음 <span class="n"></span></button>
+            <button class="chip" type="button" data-filter-attr="plant" aria-pressed="false" data-attr="plant"><span class="swatch" aria-hidden="true"></span>풀 <span class="n"></span></button>
+            <button class="chip" type="button" data-filter-attr="none" aria-pressed="false" data-attr="none"><span class="swatch" aria-hidden="true"></span>무속성 <span class="n"></span></button>
+          </div>
+        </div>
+        <div class="toolbar_end">
+          <span class="t_code result_count" data-result-count aria-live="polite"></span>
+          <div class="view_toggle" role="group" aria-label="보기 방식">
+            <button type="button" data-view="grid" aria-pressed="true"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="2" y="2" width="5" height="5"/><rect x="9" y="2" width="5" height="5"/><rect x="2" y="9" width="5" height="5"/><rect x="9" y="9" width="5" height="5"/></svg>GRID</button>
+            <button type="button" data-view="list" aria-pressed="false"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="2" y="3" width="12" height="1.5"/><rect x="2" y="7.25" width="12" height="1.5"/><rect x="2" y="11.5" width="12" height="1.5"/></svg>INDEX</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="roster" data-roster>
+      <section class="roster_group" data-division="alpha" style="--g: #a0bbf7;" aria-label="VANGUARD α TEAM">
+        <header class="group_head">
+          <span class="group_mark" aria-hidden="true"></span>
+          <h2 class="group_name" style="text-transform: none">VANGUARD α TEAM</h2>
+          <div class="group_meta"><span class="t_code">S-CLASS</span><span class="t_code" data-group-count></span></div>
+        </header>
+        <div class="roster_grid">
+          <a class="roster_card" href="./firn" data-attr="ice" data-pending aria-label="피른 프로필로 이동">
+            <span class="card_media"><img src="./images/firn_pf.png" alt="" width="650" height="950" loading="lazy" decoding="async"><span class="card_grade" aria-hidden="true">S</span></span>
+            <span class="card_info">
+              <span class="card_name">피른</span>
+              <span class="card_code">FIRN</span>
+              <span class="attr_tag" data-attr="ice">S급 얼음</span>
+              <span class="card_grade_text" aria-hidden="true">S</span>
+              <span class="card_state">RECORD PENDING</span>
+            </span>
+          </a>
+          <a class="roster_card" href="./seer" data-attr="wind" data-pending aria-label="리버티 프로필로 이동">
+            <span class="card_media"><img src="./images/liberty_pf.png" alt="" width="650" height="950" loading="lazy" decoding="async"><span class="card_grade" aria-hidden="true">S</span></span>
+            <span class="card_info">
+              <span class="card_name">리버티</span>
+              <span class="card_code">LIBERTY</span>
+              <span class="attr_tag" data-attr="wind">S급 바람</span>
+              <span class="card_grade_text" aria-hidden="true">S</span>
+              <span class="card_state">RECORD PENDING</span>
+            </span>
+          </a>
+          <a class="roster_card" href="./rem" data-attr="lightning" data-pending aria-label="렘 프로필로 이동">
+            <span class="card_media"><img src="./images/rem_pf.png" alt="" width="650" height="950" loading="lazy" decoding="async"><span class="card_grade" aria-hidden="true">S</span></span>
+            <span class="card_info">
+              <span class="card_name">렘</span>
+              <span class="card_code">REM</span>
+              <span class="attr_tag" data-attr="lightning">S급 번개</span>
+              <span class="card_grade_text" aria-hidden="true">S</span>
+              <span class="card_state">RECORD PENDING</span>
+            </span>
+          </a>
+        </div>
+      </section>
+      <section class="roster_group" data-division="rearguard" style="--g: #436BF0;" aria-label="REARGUARD">
+        <header class="group_head">
+          <span class="group_mark" aria-hidden="true"></span>
+          <h2 class="group_name">REARGUARD</h2>
+          <div class="group_meta"><span class="t_code">S-CLASS</span><span class="t_code" data-group-count></span></div>
+        </header>
+        <div class="roster_grid">
+          <a class="roster_card" href="./kain" data-attr="fire" aria-label="카인 프로필로 이동">
+            <span class="card_media"><img src="./images/kain_pf.png" alt="" width="650" height="950" loading="lazy" decoding="async"><span class="card_grade" aria-hidden="true">S</span></span>
+            <span class="card_info">
+              <span class="card_name">카인</span>
+              <span class="card_code">KAIN</span>
+              <span class="attr_tag" data-attr="fire">S급 불</span>
+              <span class="card_grade_text" aria-hidden="true">S</span>
+              <span class="card_state">OPEN RECORD</span>
+            </span>
+          </a>
+          <a class="roster_card" href="./lily" data-attr="plant" data-pending aria-label="릴리 프로필로 이동">
+            <span class="card_media"><img src="./images/lily_pf.png" alt="" width="650" height="950" loading="lazy" decoding="async"><span class="card_grade" aria-hidden="true">S</span></span>
+            <span class="card_info">
+              <span class="card_name">릴리</span>
+              <span class="card_code">LILY</span>
+              <span class="attr_tag" data-attr="plant">S급 풀</span>
+              <span class="card_grade_text" aria-hidden="true">S</span>
+              <span class="card_state">RECORD PENDING</span>
+            </span>
+          </a>
+          <a class="roster_card" href="./short" data-attr="lightning" data-pending aria-label="쇼트 프로필로 이동">
+            <span class="card_media"><img src="./images/short_pf.png" alt="" width="650" height="950" loading="lazy" decoding="async"><span class="card_grade" aria-hidden="true">S</span></span>
+            <span class="card_info">
+              <span class="card_name">쇼트</span>
+              <span class="card_code">SHORT</span>
+              <span class="attr_tag" data-attr="lightning">S급 번개</span>
+              <span class="card_grade_text" aria-hidden="true">S</span>
+              <span class="card_state">RECORD PENDING</span>
+            </span>
+          </a>
+          <a class="roster_card" href="./nocturne" data-attr="wind" data-pending aria-label="녹턴 프로필로 이동">
+            <span class="card_media"><img src="./images/nocturne_pf.png" alt="" width="650" height="950" loading="lazy" decoding="async"><span class="card_grade" aria-hidden="true">S</span></span>
+            <span class="card_info">
+              <span class="card_name">녹턴</span>
+              <span class="card_code">NOCTURNE</span>
+              <span class="attr_tag" data-attr="wind">S급 바람</span>
+              <span class="card_grade_text" aria-hidden="true">S</span>
+              <span class="card_state">RECORD PENDING</span>
+            </span>
+          </a>
+          <a class="roster_card" href="./avici" data-attr="water" data-pending aria-label="아비치 프로필로 이동">
+            <span class="card_media"><img src="./images/avici_pf.png" alt="" width="650" height="950" loading="lazy" decoding="async"><span class="card_grade" aria-hidden="true">S</span></span>
+            <span class="card_info">
+              <span class="card_name">아비치</span>
+              <span class="card_code">AVICI</span>
+              <span class="attr_tag" data-attr="water">S급 물</span>
+              <span class="card_grade_text" aria-hidden="true">S</span>
+              <span class="card_state">RECORD PENDING</span>
+            </span>
+          </a>
+        </div>
+      </section>
+      <section class="roster_group" data-division="agent" style="--g: #E58A1F;" aria-label="AGENT">
+        <header class="group_head">
+          <span class="group_mark" aria-hidden="true"></span>
+          <h2 class="group_name">AGENT</h2>
+          <div class="group_meta"><span class="t_code">A-B CLASS</span><span class="t_code" data-group-count></span></div>
+        </header>
+        <div class="roster_grid">
+          <a class="roster_card" href="./marigold" data-attr="plant" data-pending aria-label="메리골드 프로필로 이동">
+            <span class="card_media"><img src="./images/marigold_pf.png" alt="" width="650" height="950" loading="lazy" decoding="async"><span class="card_grade" aria-hidden="true">B</span></span>
+            <span class="card_info">
+              <span class="card_name">메리골드</span>
+              <span class="card_code">MARIGOLD</span>
+              <span class="attr_tag" data-attr="plant">B급 풀</span>
+              <span class="card_grade_text" aria-hidden="true">B</span>
+              <span class="card_state">RECORD PENDING</span>
+            </span>
+          </a>
+        </div>
+      </section>
+      <section class="roster_group" data-division="acolyte" style="--g: #8A96AB;" aria-label="ACOLYTE">
+        <header class="group_head">
+          <span class="group_mark" aria-hidden="true"></span>
+          <h2 class="group_name">ACOLYTE</h2>
+          <div class="group_meta"><span class="t_code">C-CLASS</span><span class="t_code" data-group-count></span></div>
+        </header>
+        <div class="roster_grid">
+          <a class="roster_card" href="./sora" data-attr="water" data-pending aria-label="소라 프로필로 이동">
+            <span class="card_media"><img src="./images/sora_pf.png" alt="" width="650" height="950" loading="lazy" decoding="async"><span class="card_grade" aria-hidden="true">C</span></span>
+            <span class="card_info">
+              <span class="card_name">소라</span>
+              <span class="card_code">SORA</span>
+              <span class="attr_tag" data-attr="water">C급 물</span>
+              <span class="card_grade_text" aria-hidden="true">C</span>
+              <span class="card_state">RECORD PENDING</span>
+            </span>
+          </a>
+        </div>
+      </section>
+      <section class="roster_group" data-division="harmony" style="--g: #9ca3af;" aria-label="HARMONY DIV. SUPPORT">
+        <header class="group_head">
+          <span class="group_mark" aria-hidden="true"></span>
+          <h2 class="group_name">HARMONY DIV.<small>SUPPORT</small></h2>
+          <div class="group_meta"><span class="t_code" data-group-count></span></div>
+        </header>
+        <div class="roster_grid">
+          <a class="roster_card" href="./dawn" data-attr="fire" data-pending aria-label="다운 프로필로 이동">
+            <span class="card_media"><img src="./images/dawn_pf.png" alt="" width="650" height="950" loading="lazy" decoding="async"><span class="card_grade" aria-hidden="true">S</span></span>
+            <span class="card_info">
+              <span class="card_name">다운</span>
+              <span class="card_code">DAWN</span>
+              <span class="attr_tag" data-attr="fire">S급 불</span>
+              <span class="card_grade_text" aria-hidden="true">S</span>
+              <span class="card_state">RECORD PENDING</span>
+            </span>
+          </a>
+          <a class="roster_card" href="./muse" data-attr="lightning" data-pending aria-label="뮤즈 프로필로 이동">
+            <span class="card_media"><img src="./images/muse_pf.png" alt="" width="650" height="950" loading="lazy" decoding="async"><span class="card_grade" aria-hidden="true">S</span></span>
+            <span class="card_info">
+              <span class="card_name">뮤즈</span>
+              <span class="card_code">MUSE</span>
+              <span class="attr_tag" data-attr="lightning">S급 번개</span>
+              <span class="card_grade_text" aria-hidden="true">S</span>
+              <span class="card_state">RECORD PENDING</span>
+            </span>
+          </a>
+        </div>
+      </section>
+      <section class="roster_group" data-division="harmony" style="--g: #D65454;" aria-label="HARMONY DIV. S.F.S. (특수현장지원팀)">
+        <header class="group_head">
+          <span class="group_mark" aria-hidden="true"></span>
+          <h2 class="group_name">HARMONY DIV.<small>S.F.S. (특수현장지원팀)</small></h2>
+          <div class="group_meta"><span class="t_code" data-group-count></span></div>
+        </header>
+        <div class="roster_grid">
+          <a class="roster_card" href="./tenuun" data-attr="wind" data-pending aria-label="테눈 프로필로 이동">
+            <span class="card_media"><img src="./images/tenuun_pf.png" alt="" width="650" height="950" loading="lazy" decoding="async"><span class="card_grade" aria-hidden="true">S</span></span>
+            <span class="card_info">
+              <span class="card_name">테눈</span>
+              <span class="card_code">TENUUN</span>
+              <span class="attr_tag" data-attr="wind">S급 바람</span>
+              <span class="card_grade_text" aria-hidden="true">S</span>
+              <span class="card_state">RECORD PENDING</span>
+            </span>
+          </a>
+          <a class="roster_card" href="./cairn" data-attr="ice" data-pending aria-label="케언 프로필로 이동">
+            <span class="card_media"><img src="./images/cairn_pf.png" alt="" width="650" height="950" loading="lazy" decoding="async"><span class="card_grade" aria-hidden="true">S</span></span>
+            <span class="card_info">
+              <span class="card_name">케언</span>
+              <span class="card_code">CAIRN</span>
+              <span class="attr_tag" data-attr="ice">S급 얼음</span>
+              <span class="card_grade_text" aria-hidden="true">S</span>
+              <span class="card_state">RECORD PENDING</span>
+            </span>
+          </a>
+          <a class="roster_card" href="./echo" data-attr="none" data-pending aria-label="에코 프로필로 이동">
+            <span class="card_media"><img src="./images/echo_pf.png" alt="" width="650" height="950" loading="lazy" decoding="async"><span class="card_grade" aria-hidden="true">B</span></span>
+            <span class="card_info">
+              <span class="card_name">에코</span>
+              <span class="card_code">ECHO</span>
+              <span class="attr_tag" data-attr="none">B급 무속성</span>
+              <span class="card_grade_text" aria-hidden="true">B</span>
+              <span class="card_state">RECORD PENDING</span>
+            </span>
+          </a>
+        </div>
+      </section>
+      <section class="roster_group" data-division="harmony" style="--g: #1F7E41;" aria-label="HARMONY DIV. R.S.T. (긴급제압팀)">
+        <header class="group_head">
+          <span class="group_mark" aria-hidden="true"></span>
+          <h2 class="group_name">HARMONY DIV.<small>R.S.T. (긴급제압팀)</small></h2>
+          <div class="group_meta"><span class="t_code" data-group-count></span></div>
+        </header>
+        <div class="roster_grid">
+          <a class="roster_card" href="./dove" data-attr="water" data-pending aria-label="도브 프로필로 이동">
+            <span class="card_media"><img src="./images/dove_pf.png" alt="" width="650" height="950" loading="lazy" decoding="async"><span class="card_grade" aria-hidden="true">S</span></span>
+            <span class="card_info">
+              <span class="card_name">도브</span>
+              <span class="card_code">DOVE</span>
+              <span class="attr_tag" data-attr="water">S급 물</span>
+              <span class="card_grade_text" aria-hidden="true">S</span>
+              <span class="card_state">RECORD PENDING</span>
+            </span>
+          </a>
+        </div>
+      </section>
+      <section class="roster_group" data-division="harmony" style="--g: #b794f4;" aria-label="HARMONY DIV. CORE">
+        <header class="group_head">
+          <span class="group_mark" aria-hidden="true"></span>
+          <h2 class="group_name">HARMONY DIV.<small>CORE</small></h2>
+          <div class="group_meta"><span class="t_code" data-group-count></span></div>
+        </header>
+        <div class="roster_grid">
+          <a class="roster_card" href="./lexi" data-attr="none" aria-label="Dr. 렉시 프로필로 이동">
+            <span class="card_media"><img src="./images/lexi_pf.png" alt="" width="650" height="950" loading="lazy" decoding="async"><span class="card_grade" aria-hidden="true">S</span></span>
+            <span class="card_info">
+              <span class="card_name">Dr. 렉시</span>
+              <span class="card_code">DR. LEXI</span>
+              <span class="attr_tag" data-attr="none">S급 무속성</span>
+              <span class="card_grade_text" aria-hidden="true">S</span>
+              <span class="card_state">OPEN RECORD</span>
+            </span>
+          </a>
+          <a class="roster_card" href="./polaris" data-attr="none" data-pending aria-label="폴라리스 프로필로 이동">
+            <span class="card_media"><img src="./images/polaris_pf.png" alt="" width="650" height="950" loading="lazy" decoding="async"><span class="card_grade" aria-hidden="true">A</span></span>
+            <span class="card_info">
+              <span class="card_name">폴라리스</span>
+              <span class="card_code">POLARIS</span>
+              <span class="attr_tag" data-attr="none">A급 무속성</span>
+              <span class="card_grade_text" aria-hidden="true">A</span>
+              <span class="card_state">RECORD PENDING</span>
+            </span>
+          </a>
+        </div>
+      </section>
+        <div class="roster_empty" data-roster-empty hidden>
+          <p>조건에 맞는 인원이 없습니다.</p>
+          <p>다른 유닛이나 속성을 선택하거나 <button class="btn" type="button" data-roster-reset>필터 초기화</button></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site_footer">
+    <div class="wrap">
+      <span class="t_code">ARCH ROSTER</span>
+      <span class="t_code">UNOFFICIAL PERSONA ARCHIVE</span>
+    </div>
+  </footer>
+
+  <script src="./script.js?v=200"></script>
+</body>
+</html>
